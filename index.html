@@ -22,20 +22,18 @@
 
     <!-- Quiz area and container -->
     <div id="quiz-container">
-        <div id="timer"></div>
+        <div id="timer">15</div>
         <div id="question-box">
             <h2 class="inner-heading" id=question>Question?</h2>
-            <button class="answer-btn option-a"></button>
-            <button class="answer-btn option-b"></button>
-            <button class="answer-btn option-c"></button>
-            <button class="answer-btn option-d"></button>
+            <button class="answer-btn option-a">Answer 1</button>
+            <button class="answer-btn option-b">Answer 2</button>
+            <button class="answer-btn option-c">Answer 3</button>
+            <button class="answer-btn option-d">Answer 4</button>
         </div>
-        <button class="utility-btn" id="next-btn">Next</button>
-        <div id="question-counter">Q x of 10</div>
         <div id="lives-box">
-            <span class="heart"></span>
-            <span class="heart"></span>
-            <span class="heart"></span>
+            <span class="heart">1</span>
+            <span class="heart">2</span>
+            <span class="heart">3</span>
         </div>
     </div>
 
@@ -43,6 +41,7 @@
     <div id="endgame-container">
         <h2 class="inner-heading" id="condition-message">Conditional Message</h2>
         <p id="score-display">Your score was 'x'</p>
+        <button id="end-game-btn" class="utility-btn">Reset Game!</button>
     </div>
     
     <!-- rules button -->

@@ -46,15 +46,72 @@ h1 {
 }
 /* Quiz Box */
 #quiz-container {
-    
+    background-color: white;
+    width: 75%;
+    border-radius: 5px;
+    border: black solid 2px;
+    padding: 20px;
+    margin: auto;
+    display: none; /*To be changed to flex for game and none for hiding*/
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#timer {
+    order: 1;
+    align-self: flex-start;
+    background-color: red;
+    color: white;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 800;
+}
+
+#question-box {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#question-box .answer-btn {
+    margin: 20px;
+    padding: 10px;
+}
+
+#lives-box {
+    order: 4;
+    align-self: flex-end;
+    background-color: chartreuse;
+    color: black;
+    border: solid 2px black;
+    border-radius: 5px;
+    padding: 10px;
+    font-weight: 800;
+}
+
+#lives-box .heart {
+    margin: 5px;
+    padding: 5px;
 }
 
 
 
 /* End Screen */
 #endgame-container {
-    display: none;  /*To be changed to flex for game and none for hiding*/
+    display: flex;  /*To be changed to block for game and none for hiding*/
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    width: 75%;
+    border-radius: 5px;
+    border: black solid 2px;
+    padding: 20px;
+    margin: auto;
 }
+
+
 
 /* Rules Button */
 #rules-container {
