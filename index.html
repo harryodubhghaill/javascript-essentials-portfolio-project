@@ -12,9 +12,11 @@
     <!-- Start screen with difficulty choice -->
     <div id="start-container">
         <h2 class="inner-heading">Select Difficulty</h2>
-        <button class="btn btn-easy">Easy</button>
-        <button class="btn btn-med">Medium</button>
-        <button class="btn btn-hard">Hard</button>
+        <div id="difficulty-buttons">
+            <button class="btn btn-easy">Easy</button>
+            <button class="btn btn-med">Medium</button>
+            <button class="btn btn-hard">Hard</button> 
+        </div>
         <button id="start-game-btn" class="utility-btn">Let's go!</button>
     </div>
 
@@ -42,12 +44,11 @@
         <h2 class="inner-heading" id="condition-message">Conditional Message</h2>
         <p id="score-display">Your score was 'x'</p>
     </div>
-
-    <!-- footer section -->
-    <footer>
+    
     <!-- rules button -->
+    <div id="rules-container">
         <button class="btn btn-rules">Rules</button>
-    </footer>
+    </div>
 
 <script src="assets/js/script.js"></script>
 </body>
