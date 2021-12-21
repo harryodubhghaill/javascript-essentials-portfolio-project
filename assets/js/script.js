@@ -43,11 +43,16 @@ document.addEventListener('DOMContentLoaded', async() => {
  * injects and renders data on page
  */
 function renderQuestion(){
+
     let data = loadQuestions();
 
     data.then(function(result) {    //used .then to resolve a promise
 
         let singleQuestion = result[0];
+        let correctAnswer = result[0].correctAnswer
+
+        console.log(correctAnswer);
+
   
       document.getElementById('question').innerHTML = singleQuestion.question;
 
@@ -55,21 +60,22 @@ function renderQuestion(){
       document.getElementById('option-b').innerHTML = singleQuestion.answers[1];
       document.getElementById('option-c').innerHTML = singleQuestion.answers[2];
       document.getElementById('option-d').innerHTML = singleQuestion.answers[3];
-})
+    })   
 }
 renderQuestion();
+
 /**
  * Gets users answer
  */
-function getUserAnswer(){
-    
+function getUserAnswer(userAnswer){
+    console.log(userAnswer);
+    return userAnswer;
 }
-
 /** 
  * Checks to see if user answer === correct answer
 */
-function checkAnswer() {
-
-}
+// function checkAnswer() {
+//     if (getUserAnswer() === )
+// }
 
 // checkAnswer();
