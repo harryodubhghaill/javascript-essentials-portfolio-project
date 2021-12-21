@@ -6,6 +6,7 @@
     --main-color: blue;
 }
 
+/* Global Styles */
 body {
     background-color: var(--main-color);
     font-family: 'Roboto Mono', monospace;
@@ -52,7 +53,7 @@ h1 {
     border: black solid 2px;
     padding: 20px;
     margin: auto;
-    display: none; /*To be changed to flex for game and none for hiding*/
+    display: flex; /*To be changed to flex for game and none for hiding*/
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -100,7 +101,7 @@ h1 {
 
 /* End Screen */
 #endgame-container {
-    display: flex;  /*To be changed to block for game and none for hiding*/
+    display: none;  /*To be changed to flex for game and none for hiding*/
     flex-direction: column;
     align-items: center;
     background-color: white;
