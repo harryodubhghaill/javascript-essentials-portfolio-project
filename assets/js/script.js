@@ -22,8 +22,6 @@ async function loadQuestions(){
         }
     return questionsArray
     };
-    
-
 /**
  * calls the async function when all DOM is loaded and catches errors
  */
@@ -38,7 +36,7 @@ document.addEventListener('DOMContentLoaded', async() => {
     }
 })
 
-
+let query;
 /**
  * injects and renders data on page
  */
@@ -51,8 +49,6 @@ function renderQuestion(){
         let singleQuestion = result[0];
         let correctAnswer = result[0].correctAnswer
 
-        console.log(correctAnswer);
-
   
       document.getElementById('question').innerHTML = singleQuestion.question;
 
@@ -60,22 +56,29 @@ function renderQuestion(){
       document.getElementById('option-b').innerHTML = singleQuestion.answers[1];
       document.getElementById('option-c').innerHTML = singleQuestion.answers[2];
       document.getElementById('option-d').innerHTML = singleQuestion.answers[3];
-    })   
+
+     function getUserAnswer(userAnswer){
+        if (userAnswer === correctAnswer) {
+            console.log('correct')
+        } else {
+            console.log('Nope, you dummy!')
+        }
+        console.log(userAnswer);
+    }
+    query = getUserAnswer;
+    })
 }
 renderQuestion();
 
 /**
  * Gets users answer
  */
-function getUserAnswer(userAnswer){
-    console.log(userAnswer);
-    return userAnswer;
-}
+
 /** 
  * Checks to see if user answer === correct answer
 */
-// function checkAnswer() {
-//     if (getUserAnswer() === )
-// }
+function checkAnswer() {
 
-// checkAnswer();
+    console.log('running');
+    
+    }
