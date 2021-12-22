@@ -2,7 +2,7 @@
 
 Lets get quizzical is an interactive and challenging quiz style trivia game. Users will be presented with a question which they will have to answer by clicking the button with the appropriate answer.
 
-<img src="assets/images/am-i-responsive-vineheads.PNG">
+<img src="assets/images/readme/am-i-responsive-quizzical-min.PNG">
 
 
 
@@ -17,7 +17,15 @@ Lets get quizzical is an interactive and challenging quiz style trivia game. Use
   - The button is an interactive element that allows the user to decide when they would like to start the quiz.
   - This is also the return page for restarting the quiz once exited
   
-  <img src="assets/images/nav-banner-vineheads.PNG">
+  <img src="assets/images/readme/start-page-min.PNG">
+
+- __Rules Box__
+
+  - A button will be on screen at all times for the user to click and access a panel with the game rules.
+  - This panel contains rules and condtions of the game.
+  - There is a button inside the panel to minimize the content box once a user no longer requires the information.
+  
+  <img src="assets/images/readme/rules-min.PNG">
 
 - __Quiz Page__
 
@@ -26,42 +34,44 @@ Lets get quizzical is an interactive and challenging quiz style trivia game. Use
     - Each answer is presented on a button to allow the user easy and intuative selection.
     - Also displayed here are the score and life counters.
 
-<img src="assets/images/vineheads-landing-page.PNG">
+<img src="assets/images/readme/quiz-page-min.PNG">
 
 - __Random Questions__
 
     - All questions and answers are sourced from an external API (https://opentdb.com/) and will reload a new bank of questions and answers each game.
     - This adds replayability and will keep users engaged for more than one game.
 
-<img src="assets/images/text-links-vineheads.PNG">
+<img src="assets/images/readme/question-answers-min.PNG">
 
 - __Score Counter__ 
 
   - The score counter is displayed on screen and will increment by 1 on every correct answer.
   - This allows a winning score to be set and also indicates user performance.
 
-<img src="assets/images/vineheads-footer.PNG">
+<img src="assets/images/readme/score-min.PNG">
 
 - __Lives Counter__ 
 
   - The lives counter is displayed on screen and will decrement by 1 on every incorrect answer.
   - The lives are set to 3 by default and will stop the game if the user has lost all 3.
 
-<img src="assets/images/vineheads-footer.PNG">
+<img src="assets/images/readme/lives-min.PNG">
 
 - __Message and Next Question__
 
     - This will show the correct conditional message depending on the users answer after they have selected their answer.
     - A button to continue the game is also displayed. Pushing this will advance to the next question.
 
-<img src="assets/images/gallery-vineheads.PNG">
+<img src="assets/images/readme/correct-answer-min.PNG">
+<img src="assets/images/readme/wrong-answer-min.PNG">
 
 - __End Game Screen__
 
     - This appears if either of 2 conditions (game win or game lose) are met and will display the game result to the user.
     - There is also a restart button for the user to press if they would like to start the game again.
 
-<img src="assets/images/vineheads-contact-form.PNG">
+<img src="assets/images/readme/you-win-min.PNG">
+<img src="assets/images/readme/loser-min.PNG">
 
 ### Features left to Implement
 
@@ -118,5 +128,3 @@ The live link can be found here - https://harryodubhghaill.github.io/javascript-
 - Questions are from an open source API [Open Trivia Database](https://opentdb.com/).
 - Favicon was found here [Favicon](https://www.flaticon.com/free-icons/quiz).
 - Fonts were sourced from [Google Fonts](https://fonts.google.com/).
-
-<em>you can also see images of my handwritten design notes below</em>
