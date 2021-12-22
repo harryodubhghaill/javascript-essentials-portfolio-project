@@ -1,60 +1,75 @@
 /* Importing Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;600&display=swap');
 
-/* Colour Variables */
-:root {
-    --main-color: blue;
-}
 
 /* Global Styles */
 body {
-    background-color: var(--main-color);
+    background-color: lightcyan;
     font-family: 'Roboto Mono', monospace;
     padding: 20px;
 }
 
-/* Start Box */
-#start-container  {
-    background-color: white;
+.btn {
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+}
+.btn:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.container {
+    background-color: lightcoral;
     width: 75%;
     border-radius: 5px;
     border: black solid 2px;
     padding: 20px;
-    display: flex;     /*To be changed to flex for game and none for hiding*/
+    display: flex;    /*To be changed to flex for game and none for hiding*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
 }
-
-#start-game-btn {
-    margin: 20px;
-}
 /* Quiz Box */
 #quiz-container {
-    background-color: white;
-    width: 75%;
-    border-radius: 5px;
-    border: black solid 2px;
-    padding: 20px;
-    margin: auto;
-    display: none; /*To be changed to flex for game and none for hiding*/
     flex-direction: column;
     justify-content: center;
 }
 
-#score {
-    align-self: flex-end;
-    background-color: red;
-    color: white;
+.value-box {
     border: solid 2px black;
     border-radius: 5px;
-    padding: 10px;
-    font-weight: 800;
+    padding: 5px;
+    font-weight: 300;
+    margin: 15px;
 }
 
+.score {
+    background-color: white;
+    color: black;
+}
+
+.lives {
+    background-color: red;
+    color: white;
+}
+
+
 #question-box {
-    order: 2;
     display: flex; 
     flex-direction: column;
     margin-bottom: 20px;
@@ -75,7 +90,6 @@ body {
 
 /* End Screen */
 #endgame-container {
-    display: none;  /*To be changed to flex for game and none for hiding*/
     flex-direction: column;
     align-items: center;
     background-color: white;
@@ -85,38 +99,14 @@ body {
     padding: 20px;
     margin: auto;
 }
-
-
-
-/* Rules Button */
-#rules-container {
-    display: none;  /*To be changed to flex for game and none for hiding*/
-}
-
-.answer-btn, #next, #start-game-btn {
-	box-shadow:inset 0px 0px 15px 3px #23395e;
-	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
-	background-color:#2e466e;
-	border-radius:17px;
-	border:1px solid #1f2f47;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:15px;
-	padding:6px 13px;
-	text-decoration:none;
-	text-shadow:0px 1px 0px #263666;
-}
-#next, #start-game-btn:hover {
-	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
-	background-color:#415989;
-}
-
-.inner-heading {
+ul {
+    padding: 0;
+    list-style: none;
     text-align: center;
 }
 
-#message {
-    text-align: center;
+#rules-button {
+    display: block;
+    transform: translateY(50px);
+    margin: auto;
 }

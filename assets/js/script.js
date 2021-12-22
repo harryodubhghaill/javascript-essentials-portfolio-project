@@ -42,6 +42,8 @@ async function loadQuestions(){
  document.getElementById('winner').style.display = 'none'
  document.getElementById('restart-btn').style.display = 'none'
  document.getElementById('rules').style.display = 'none'
+ document.getElementById('quiz-container').style.display = 'none'
+ document.getElementById('end-sceen').style.display = 'none'
 // allows onclick to access internal function
 let query;
 /**
@@ -54,7 +56,7 @@ function runGame(){
     document.getElementById('question-box').style.display = 'flex'
     document.getElementById("next").style.display = 'none'
     document.getElementById('message').style.display = 'none'
-    document.body.style.backgroundColor = 'blue';
+    document.body.style.backgroundColor = 'lightcyan';
 
     let data = loadQuestions();
 
@@ -137,6 +139,7 @@ function nextQuestion(){
  */
 function youWin(){
     document.getElementById('quiz-container').style.display = 'none'
+    document.getElementById('end-sceen').style.display = 'flex'
     document.getElementById('winner').style.display = 'block'
     document.getElementById('restart-btn').style.display = 'block'
 }
@@ -146,6 +149,7 @@ function youWin(){
  */
 function gameOver(){
     document.getElementById('quiz-container').style.display = 'none'
+    document.getElementById('end-sceen').style.display = 'flex'
     document.getElementById('game-over').style.display = 'block'
     document.getElementById('restart-btn').style.display = 'block'
 }
