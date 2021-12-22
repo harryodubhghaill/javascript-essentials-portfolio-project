@@ -94,6 +94,10 @@ Lets get quizzical is an interactive and challenging quiz style trivia game. Use
 
 Manual testing was done through devices I own and included my laptop, phone and tablet. I also tested the website on popular web browsers on my windows laptop. These included Chrome, Firefox, Edge, Opera and Safari.
 
+A Lighthouse test was performed in Chrome dev tools for performance and accessibility.
+
+<img src="assets/images/readme/lighthouse-result-min.PNG">
+
 ### Validator Testing
 
 - HTML
