@@ -38,25 +38,17 @@ async function loadQuestions(){
 /**
  * Start game
  */
- document.getElementById('game-over').style.display = 'none'
- document.getElementById('winner').style.display = 'none'
- document.getElementById('restart-btn').style.display = 'none'
- document.getElementById('rules').style.display = 'none'
- document.getElementById('quiz-container').style.display = 'none'
- document.getElementById('end-sceen').style.display = 'none'
+initGame();
+
 // allows onclick to access internal function
 let query;
+
 /**
  * runs the game
  */
-
 function runGame(){
-    document.getElementById('start-container').style.display = 'none'
-    document.getElementById('quiz-container').style.display = 'flex'
-    document.getElementById('question-box').style.display = 'flex'
-    document.getElementById("next").style.display = 'none'
-    document.getElementById('message').style.display = 'none'
-    document.body.style.backgroundColor = 'lightcyan';
+
+    initQuiz();
 
     let data = loadQuestions();
 
@@ -64,24 +56,7 @@ function runGame(){
 
         let singleQuestion = result[0];
         let correctAnswer = result[0].correctAnswer;
-
-        //
-        //Attempts at shuffling answers array to variate answer position
-        //
-
-        // let items = singleQuestion.answers
-
-        // let shuffledAnswers = [];
-
-        // function shuffle(items) {
-        //     for (let i = 0; i<items.length; i++){
-        //         let randomAnswer = items[(Math.floor(Math.random()*items.length))];
-        //         return randomAnswer;
-        //     }
-        // }
-        // console.log(items);
-        // console.log(shuffle(items));
-  
+      // adding data into game elements
       document.getElementById('question').innerHTML = singleQuestion.question;
 
       document.getElementById('option-a').innerHTML = singleQuestion.answers[1];
@@ -90,8 +65,11 @@ function runGame(){
       document.getElementById('option-d').innerHTML = singleQuestion.answers[2];
 
     
-
-     function getUserAnswer(userAnswer){
+    /**
+     * gets answer from this.query in html and compares against correct answer
+     * if statement will fire appropriate functions
+     */
+    function getUserAnswer(userAnswer){
         if (userAnswer === correctAnswer) {
             incrementScore();
             correctStyleChanges();
@@ -104,24 +82,48 @@ function runGame(){
     })
 }
 
+/**
+ * Hides all non necesary elements
+ */
+function initGame() {
+    document.getElementById('game-over').style.display = 'none'
+    document.getElementById('winner').style.display = 'none'
+    document.getElementById('restart-btn').style.display = 'none'
+    document.getElementById('rules').style.display = 'none'
+    document.getElementById('quiz-container').style.display = 'none'
+    document.getElementById('end-sceen').style.display = 'none'
+}
+/**
+ * Initialises the quiz environment
+ */
+function initQuiz(){
+    document.getElementById('start-container').style.display = 'none'
+    document.getElementById('quiz-container').style.display = 'flex'
+    document.getElementById('question-box').style.display = 'flex'
+    document.getElementById('advance-box').style.display = 'none'
+    document.body.style.backgroundColor = 'lightcyan';
+}
+/**
+ * Style conditions for correct answer
+ */
 function correctStyleChanges(){
     document.getElementById('question-box').style.display = 'none';
-    document.getElementById("next").style.display = 'block';
     document.body.style.backgroundColor = 'green';
-    document.getElementById('message').style.display = 'block'
+    document.getElementById('advance-box').style.display = 'block'
     document.getElementById('message').innerHTML = 'Correct'
 }
-
+/**
+ * Style conditions for incorrect answer
+ */
 function incorrectStyleChanges(){
     document.getElementById('question-box').style.display = 'none';
-    document.getElementById("next").style.display = 'block';
     document.body.style.backgroundColor = 'red';
-    document.getElementById('message').style.display = 'block'
+    document.getElementById('advance-box').style.display = 'block';
     document.getElementById('message').innerHTML = 'Ha! Wrong!'
 }
 /**
  * Checks to see if max score is reached or all lives are lost
- * to advance game.
+ * to advance game or display relevant window
  */
 function nextQuestion(){
     let score = document.getElementById('score').innerHTML
@@ -159,6 +161,7 @@ function gameOver(){
 function incrementScore() {
 
     // Gets the current score from the DOM and increments it
+    // Code take from loveMaths project
 
     let oldScore = parseInt(document.getElementById("score").innerText);
     document.getElementById("score").innerText = ++oldScore;
@@ -169,19 +172,26 @@ function incrementScore() {
 function decrementScore() {
 
     // Gets the current score from the DOM and decrements it
+    // Code take from loveMaths project
 
     let oldLives = parseInt(document.getElementById("lives").innerText);
     document.getElementById("lives").innerText = --oldLives;
 }
-
+/**
+ * reloads the entire page (url refresh)
+ */
 function restartQuiz(){
     location.reload();
 }
-
+/**
+ * show rules container
+ */
 function showRules() {
     document.getElementById('rules').style.display = 'flex'
 }
-
+/**
+ * hide rules container
+ */
 function hideRules() {
     document.getElementById('rules').style.display = 'none'
 }
