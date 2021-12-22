@@ -1,7 +1,6 @@
 /* Importing Font */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;400;600&display=swap');
 
-
 /* Global Styles */
 body {
     background-color: lightcyan;
@@ -9,6 +8,7 @@ body {
     padding: 20px;
 }
 
+/* creates style for all buttons */
 .btn {
 	box-shadow:inset 0px 0px 15px 3px #23395e;
 	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
@@ -23,15 +23,18 @@ body {
 	padding:6px 13px;
 	text-decoration:none;
 }
+
 .btn:hover {
 	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
 	background-color:#415989;
 }
 
+/* centers heading text */
 h1, h2 {
     text-align: center;
 }
 
+/* creates style for all containers/backgrounds */
 .container {
     background-color: lightcoral;
     width: 75%;
@@ -44,12 +47,14 @@ h1, h2 {
     align-items: center;
     margin: auto;
 }
+
 /* Quiz Box */
 #quiz-container {
     flex-direction: column;
     justify-content: center;
 }
 
+/* base style for score and lives box */
 .value-box {
     border: solid 2px black;
     border-radius: 5px;
@@ -68,7 +73,7 @@ h1, h2 {
     color: white;
 }
 
-
+/* force answers into vertical column */
 #question-box {
     display: flex; 
     flex-direction: column;
@@ -85,9 +90,6 @@ h1, h2 {
     width: fit-content;
     margin: auto;
 }
-
-
-
 /* End Screen */
 #endgame-container {
     flex-direction: column;
@@ -99,6 +101,7 @@ h1, h2 {
     padding: 20px;
     margin: auto;
 }
+
 ul {
     padding: 0;
     list-style: none;

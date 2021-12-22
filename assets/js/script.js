@@ -65,7 +65,7 @@ function runGame(){
         }
     }
     query = getUserAnswer;
-    })
+    });
 }
 
 /**
