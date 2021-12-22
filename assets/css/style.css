@@ -23,7 +23,7 @@ h1 {
     border-radius: 5px;
     border: black solid 2px;
     padding: 20px;
-    display: none;     /*To be changed to flex for game and none for hiding*/
+    display: flex;     /*To be changed to flex for game and none for hiding*/
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -53,14 +53,13 @@ h1 {
     border: black solid 2px;
     padding: 20px;
     margin: auto;
-    display: flex; /*To be changed to flex for game and none for hiding*/
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: none; /*To be changed to flex for game and none for hiding*/
+    flex-direction: column;
+    justify-content: center;
 }
 
-#timer {
-    order: 1;
-    align-self: flex-start;
+#score {
+    align-self: flex-end;
     background-color: red;
     color: white;
     border: solid 2px black;
@@ -71,7 +70,7 @@ h1 {
 
 #question-box {
     order: 2;
-    display: flex;
+    display: flex; 
     flex-direction: column;
     margin-bottom: 20px;
 }
@@ -81,20 +80,10 @@ h1 {
     padding: 10px;
 }
 
-#lives-box {
-    order: 4;
-    align-self: flex-end;
-    background-color: chartreuse;
-    color: black;
-    border: solid 2px black;
-    border-radius: 5px;
-    padding: 10px;
-    font-weight: 800;
-}
-
-#lives-box .heart {
-    margin: 5px;
-    padding: 5px;
+#next {
+    display: block;
+    width: fit-content;
+    margin: auto;
 }
 
 

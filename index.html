@@ -13,16 +13,16 @@
     <div id="start-container">
         <h2 class="inner-heading">Select Difficulty</h2>
         <div id="difficulty-buttons">
-            <button class="btn btn-easy">Easy</button>
-            <button class="btn btn-med">Medium</button>
-            <button class="btn btn-hard">Hard</button> 
+            <button class="btn btn-easy" onclick="easyGame()">Easy</button>
+            <button class="btn btn-med" onclick="mediumGame()">Medium</button>
+            <button class="btn btn-hard" onclick="hardGame()">Hard</button> 
         </div>
         <button id="start-game-btn" class="utility-btn">Let's go!</button>
     </div>
 
     <!-- Quiz area and container -->
     <div id="quiz-container">
-        <div id="timer">15</div>
+        <div id="score">0</div>
         <div id="question-box">
             <h2 class="inner-heading" id=question></h2>
             <button class="answer-btn" id="option-a" onclick="query(this.innerHTML)"></button>
@@ -30,11 +30,7 @@
             <button class="answer-btn" id="option-c" onclick="query(this.innerHTML)"></button>
             <button class="answer-btn" id="option-d" onclick="query(this.innerHTML)"></button>
         </div>
-        <div id="lives-box">
-            <span class="heart">1</span>
-            <span class="heart">2</span>
-            <span class="heart">3</span>
-        </div>
+        <button id="next" onclick="runGame()">Next Question</button>
     </div>
 
     <!-- Game end screen -->
