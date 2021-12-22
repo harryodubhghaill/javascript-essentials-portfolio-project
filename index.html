@@ -8,14 +8,16 @@
     <title>Let's Get Quizzical</title>
 </head>
 <body>
-    <!-- Start screen with difficulty choice -->
-    <div id="start-container">
+    <h1>LETS GET QUIZZICAL</h1>
+    <!-- Start screen-->
+    <div id="start-container" class="container">
+        <h2>Are you ready for the ultimate quizzing challenge?</h2>
         <button id="start-game-btn" onclick="runGame()">Let's go!</button>
     </div>
 
     <!-- Quiz area and container -->
-    <div id="quiz-container">
-        <div id="score">0</div>
+    <div id="quiz-container" class="container">
+        <div id="score" class="value-box">0</div>
         <div id="question-box">
             <h2 class="inner-heading" id=question></h2>
             <button class="answer-btn" id="option-a" onclick="query(this.innerHTML)"></button>
@@ -24,8 +26,33 @@
             <button class="answer-btn" id="option-d" onclick="query(this.innerHTML)"></button>
         </div>
         <h2 id="message"></h2>
-        <button id="next" onclick="runGame()">Next Question</button>
+        <button id="next" onclick="nextQuestion()">Next Question</button>
+        <div id="lives" class="value-box">3</div>
     </div>
+
+    <div id="container" class="end-screen">
+        <!-- game over screen -->
+        <div id="game-over">Loser!</div>
+        <!-- winning screen -->
+        <div id="winner">You Win!</div>
+        <!-- Restart -->
+        <button id="restart-btn" onclick="restartQuiz()">Restart Quiz</button>
+    </div>
+
+    <div class="container" id="rules" class="container">
+        <ul>
+            <li>Answer the question provided</li>
+            <li>Get it right, you get a point</li>
+            <li>Get it wrong, you lose a life</li>
+            <li>Get 10 correct answers to win</li>
+            <li>Lose all 3 lives and you'll have to start again!</li>
+        </ul>
+        <button id="close" onclick="hideRules()">Close</button>
+    </div>
+    
+    <footer>
+        <button id="rules-button" onclick="showRules()">Rules</button>
+    </footer>
 
 <script src="assets/js/script.js"></script>
 </body>
