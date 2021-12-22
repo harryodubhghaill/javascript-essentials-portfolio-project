@@ -1,18 +1,4 @@
 /**
- * calls the async function when user selects difficulty
- */
-async function easySelection() {
-    let rawQuestions = [];
-
-    try {
-        rawQuestions = await loadQuestions();
-    } catch (e) {
-        console.log('Error!');
-        console.log(e);
-    }
-}
-
-/**
  * async function to ingest data from trivia API and sort for use
  */
 async function loadQuestions(){
@@ -30,11 +16,11 @@ async function loadQuestions(){
 
             let questionObject = {
                 question, correctAnswer, incorrectAnswers, answers,
-            }
+            };
             questionsArray.push(questionObject); 
         }
-    return questionsArray
-    };
+    return questionsArray;
+    }
 /**
  * Start game
  */
@@ -86,21 +72,21 @@ function runGame(){
  * Hides all non necesary elements
  */
 function initGame() {
-    document.getElementById('game-over').style.display = 'none'
-    document.getElementById('winner').style.display = 'none'
-    document.getElementById('restart-btn').style.display = 'none'
-    document.getElementById('rules').style.display = 'none'
-    document.getElementById('quiz-container').style.display = 'none'
-    document.getElementById('end-sceen').style.display = 'none'
+    document.getElementById('game-over').style.display = 'none';
+    document.getElementById('winner').style.display = 'none';
+    document.getElementById('restart-btn').style.display = 'none';
+    document.getElementById('rules').style.display = 'none';
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('end-sceen').style.display = 'none';
 }
 /**
  * Initialises the quiz environment
  */
 function initQuiz(){
-    document.getElementById('start-container').style.display = 'none'
-    document.getElementById('quiz-container').style.display = 'flex'
-    document.getElementById('question-box').style.display = 'flex'
-    document.getElementById('advance-box').style.display = 'none'
+    document.getElementById('start-container').style.display = 'none';
+    document.getElementById('quiz-container').style.display = 'flex';
+    document.getElementById('question-box').style.display = 'flex';
+    document.getElementById('advance-box').style.display = 'none';
     document.body.style.backgroundColor = 'lightcyan';
 }
 /**
@@ -109,8 +95,8 @@ function initQuiz(){
 function correctStyleChanges(){
     document.getElementById('question-box').style.display = 'none';
     document.body.style.backgroundColor = 'green';
-    document.getElementById('advance-box').style.display = 'block'
-    document.getElementById('message').innerHTML = 'Correct'
+    document.getElementById('advance-box').style.display = 'block';
+    document.getElementById('message').innerHTML = 'Correct';
 }
 /**
  * Style conditions for incorrect answer
@@ -119,15 +105,15 @@ function incorrectStyleChanges(){
     document.getElementById('question-box').style.display = 'none';
     document.body.style.backgroundColor = 'red';
     document.getElementById('advance-box').style.display = 'block';
-    document.getElementById('message').innerHTML = 'Ha! Wrong!'
+    document.getElementById('message').innerHTML = 'Ha! Wrong!';
 }
 /**
  * Checks to see if max score is reached or all lives are lost
  * to advance game or display relevant window
  */
 function nextQuestion(){
-    let score = document.getElementById('score').innerHTML
-    let lives = document.getElementById('lives').innerHTML
+    let score = document.getElementById('score').innerHTML;
+    let lives = document.getElementById('lives').innerHTML;
     if (lives <= 0) {
         gameOver();
     } else if(score >= 10) {
@@ -140,20 +126,20 @@ function nextQuestion(){
  * Shows winning screen
  */
 function youWin(){
-    document.getElementById('quiz-container').style.display = 'none'
-    document.getElementById('end-sceen').style.display = 'flex'
-    document.getElementById('winner').style.display = 'block'
-    document.getElementById('restart-btn').style.display = 'block'
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('end-sceen').style.display = 'flex';
+    document.getElementById('winner').style.display = 'block';
+    document.getElementById('restart-btn').style.display = 'block';
 }
 
 /**
  * Shows losing screen
  */
 function gameOver(){
-    document.getElementById('quiz-container').style.display = 'none'
-    document.getElementById('end-sceen').style.display = 'flex'
-    document.getElementById('game-over').style.display = 'block'
-    document.getElementById('restart-btn').style.display = 'block'
+    document.getElementById('quiz-container').style.display = 'none';
+    document.getElementById('end-sceen').style.display = 'flex';
+    document.getElementById('game-over').style.display = 'block';
+    document.getElementById('restart-btn').style.display = 'block';
 }
 /**
  * Adds score (value in HTML element) by a value of one
@@ -187,11 +173,11 @@ function restartQuiz(){
  * show rules container
  */
 function showRules() {
-    document.getElementById('rules').style.display = 'flex'
+    document.getElementById('rules').style.display = 'flex';
 }
 /**
  * hide rules container
  */
 function hideRules() {
-    document.getElementById('rules').style.display = 'none'
+    document.getElementById('rules').style.display = 'none';
 }
