@@ -5,19 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>Let's Get Quizzical</title>
 </head>
 <body>
-    <h1>Lets Get Quizzical!</h1>
     <!-- Start screen with difficulty choice -->
     <div id="start-container">
-        <h2 class="inner-heading">Select Difficulty</h2>
-        <div id="difficulty-buttons">
-            <button class="btn btn-easy" onclick="easyGame()">Easy</button>
-            <button class="btn btn-med" onclick="mediumGame()">Medium</button>
-            <button class="btn btn-hard" onclick="hardGame()">Hard</button> 
-        </div>
-        <button id="start-game-btn" class="utility-btn">Let's go!</button>
+        <button id="start-game-btn" onclick="runGame()">Let's go!</button>
     </div>
 
     <!-- Quiz area and container -->
@@ -30,19 +23,8 @@
             <button class="answer-btn" id="option-c" onclick="query(this.innerHTML)"></button>
             <button class="answer-btn" id="option-d" onclick="query(this.innerHTML)"></button>
         </div>
+        <h2 id="message"></h2>
         <button id="next" onclick="runGame()">Next Question</button>
-    </div>
-
-    <!-- Game end screen -->
-    <div id="endgame-container">
-        <h2 class="inner-heading" id="condition-message">Conditional Message</h2>
-        <p id="score-display">Your score was 'x'</p>
-        <button id="end-game-btn" class="utility-btn">Reset Game!</button>
-    </div>
-    
-    <!-- rules button -->
-    <div id="rules-container">
-        <button class="btn btn-rules">Rules</button>
     </div>
 
 <script src="assets/js/script.js"></script>

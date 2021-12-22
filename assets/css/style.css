@@ -10,10 +10,7 @@
 body {
     background-color: var(--main-color);
     font-family: 'Roboto Mono', monospace;
-}
-
-h1 {
-    text-align: center;
+    padding: 20px;
 }
 
 /* Start Box */
@@ -28,18 +25,6 @@ h1 {
     justify-content: center;
     align-items: center;
     margin: auto;
-}
-
-#difficulty-buttons {
-    display: flex;
-    padding: 20px;
-}
-
-#difficulty-buttons .btn {
-    margin: 0 20px;
-    height: 100px;
-    width: 100px;
-    border-radius: 5px;
 }
 
 #start-game-btn {
@@ -108,3 +93,30 @@ h1 {
     display: none;  /*To be changed to flex for game and none for hiding*/
 }
 
+.answer-btn, #next, #start-game-btn {
+	box-shadow:inset 0px 0px 15px 3px #23395e;
+	background:linear-gradient(to bottom, #2e466e 5%, #415989 100%);
+	background-color:#2e466e;
+	border-radius:17px;
+	border:1px solid #1f2f47;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:6px 13px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #263666;
+}
+#next, #start-game-btn:hover {
+	background:linear-gradient(to bottom, #415989 5%, #2e466e 100%);
+	background-color:#415989;
+}
+
+.inner-heading {
+    text-align: center;
+}
+
+#message {
+    text-align: center;
+}
