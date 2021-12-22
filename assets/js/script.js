@@ -42,13 +42,19 @@ function runGame(){
 
         let singleQuestion = result[0];
         let correctAnswer = result[0].correctAnswer;
+
+        // Shuffled array of 4 numbers to randomize correct answer location
+        let array = [0, 1, 2, 3];
+        let shuffledArray = array.sort((a, b) => 0.5 - Math.random());
+        console.log(shuffledArray);
+
       // adding data into game elements
       document.getElementById('question').innerHTML = singleQuestion.question;
-
-      document.getElementById('option-a').innerHTML = singleQuestion.answers[1];
-      document.getElementById('option-b').innerHTML = singleQuestion.answers[3];
-      document.getElementById('option-c').innerHTML = singleQuestion.answers[0];
-      document.getElementById('option-d').innerHTML = singleQuestion.answers[2];
+        // shuffled array used here
+      document.getElementById('option-a').innerHTML = singleQuestion.answers[shuffledArray[0]];
+      document.getElementById('option-b').innerHTML = singleQuestion.answers[shuffledArray[1]];
+      document.getElementById('option-c').innerHTML = singleQuestion.answers[shuffledArray[2]];
+      document.getElementById('option-d').innerHTML = singleQuestion.answers[shuffledArray[3]];
 
     
     /**
